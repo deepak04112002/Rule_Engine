@@ -27,6 +27,33 @@ src/
 │ └── offer.drl
 ```
 
+
+### Docker Support
+
+#### Prerequisites
+- Docker installed on your machine
+- Docker Compose (included with Docker Desktop)
+
+#### Docker Files
+The project includes the following Docker-related files:
+- `Dockerfile`: Contains instructions for building the Docker image
+- `docker-compose.yml`: Defines the service configuration
+
+
+### Building and Running with Docker
+
+1. Build the Docker image:
+```bash
+docker build -t drools-rule-engine .
+````
+2. Run using Docker:
+````bash
+docker run -p 8080:8080 drools-rule-engine
+````
+3. Or using Docker Compose:
+````bash
+docker-compose up -d
+````
 ### Configuration
 
 #### Maven Dependencies
