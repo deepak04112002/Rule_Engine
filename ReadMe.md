@@ -55,10 +55,12 @@ Content-Type: application/json
 ### Running the Application
 1. Clone the repository
 ````
-
+git clone https://github.com/deepak04112002/pixel_generator.git
 ````
 2. Navigate to the project directory
-
+````
+cd droolengine
+````
 3. Run the application:
 ````bash
 mvn spring-boot:run
@@ -87,26 +89,18 @@ To add new rules:
 ````
 rule "RuleName"
 when
-    orderObject: Order(cardType == "TYPE", price > amount)
+    orderObject: Order(cardType == "NEW_CARD", price > amount)
 then
     orderObject.setDiscount(discountPercentage);
 end
 ````
 ### Troubleshooting
 Common issues and solutions:
-
 1. Rule not firing:
-
-- Verify rule syntax in offer.drl
-
-- Check if the rule conditions match your input
-
-- Ensure proper package declaration in DRL file
-
+- Verify rule syntax in offer.drl file.
+- Check if the rule conditions match your input.
+- Ensure proper package declaration in DRL file.
 2. Application fails to start:
-
 - Verify proper placement of offer.drl file
-
-- Check for proper dependency versions
-
-- Ensure Java version compatibility
+- Check for proper dependency versions.
+- Ensure Java version compatibility.
